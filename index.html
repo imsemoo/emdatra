@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Emdatra | UK Import & Export of Food Products</title>
+  <meta name="description"
+    content="Emdatra is a UK-based company specialized in importing and exporting food products. We connect trusted producers with global markets through reliable logistics and quality-first sourcing." />
+  <meta name="keywords" content="Emdatra, food import export, UK, logistics, sourcing, wholesale, trading, London" />
+  <meta name="theme-color" content="#0d6efd" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Emdatra | Import & Export Food Products" />
+  <meta property="og:description" content="Trusted UK partner for importing and exporting food products worldwide." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --brand: #0d6efd;
+      --dark: #0b1220;
+      --muted: #6c757d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      color: #1f2937;
+    }
+
+    .navbar {
+      backdrop-filter: saturate(180%) blur(10px);
+      background: #fff;
+    }
+
+    .navbar .nav-link {
+      color: rgba(13, 110, 253, .85) !important;
+      opacity: .9;
+    }
+
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      background: radial-gradient(ellipse at top, rgba(13, 110, 253, .45), rgba(13, 110, 253, .1)),
+        url("/top-view-female-cook-cutting-apple-dark-surface.jpg") center/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .55));
+    }
+
+    .hero>.container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge-soft {
+      background: rgba(255, 255, 255, .15);
+      border: 1px solid rgba(255, 255, 255, .25);
+      color: #fff;
+    }
+
+    .shadow-smooth {
+      box-shadow: 0 10px 30px rgba(13, 110, 253, .15);
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .lead-lg {
+      font-size: 1.2rem;
+      color: #4b5563;
+    }
+
+    .icon-lg {
+      font-size: 34px;
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: #f1f5ff;
+      color: var(--brand);
+    }
+
+    .step {
+      border-left: 3px solid #e9ecef;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .step::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      top: 8px;
+      width: 14px;
+      height: 14px;
+      background: var(--brand);
+      border-radius: 50%;
+    }
+
+    .stat {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand);
+    }
+
+    .guarantee {
+      background: linear-gradient(180deg, #f8fbff, #ffffff);
+    }
+
+    .gallery img {
+      border-radius: 14px;
+    }
+
+    .brand-logos img {
+      opacity: .7;
+      filter: grayscale(100%);
+      transition: .2s;
+      max-height: 120px;
+    }
+
+    .brand-logos img:hover {
+      opacity: 1;
+      filter: none;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #0d6efd, #2563eb);
+      color: #fff;
+      border-radius: 24px;
+    }
+
+    .footer {
+      background: #0b1220;
+      color: #cbd5e1;
+    }
+
+    .footer a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    #sectors img {
+      aspect-ratio: 2/3;
+      object-fit: cover;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 12px;
+    }
+
+    .btn-rounded {
+      border-radius: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 99;
+      background: #25D366;
+      color: #fff;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, .4);
+    }
+
+    .back-to-top {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 98;
+      display: none;
+      background: #111827;
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      opacity: .9;
+    }
+
+    /* Accessibility focus */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(13, 110, 253, .6) !important;
+      outline-offset: 2px;
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Emdatra Ltd",
+    "url":"https://example.com",
+    "logo":"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=60",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"71-75 Shelton Street, Covent Garden",
+      "addressLocality":"London",
+      "addressCountry":"UK",
+      "postalCode":"WC2H9JQ"
+    },
+    "email":"mailto:info@emdatra.org",
+    "telephone":"+44 7884 046311",
+    "sameAs":["https://www.linkedin.com","https://www.facebook.com"]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">
+        <img src="/logo.png" alt="" width="100px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMain" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sectors">Sectors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <span class="badge rounded-pill badge-soft px-3 py-2 mb-3"><i class="fa-solid fa-earth-europe me-2"></i> UK Food
+        Import & Export</span>
+      <h1 class="display-4 fw-bold mb-3">We Move Quality Food, Globally.</h1>
+      <p class="lead mb-4">Trusted by brands and distributors to source, ship, and deliver food products at scale —
+        safely and on time.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#contact" class="btn btn-light btn-lg btn-rounded shadow-smooth"><i
+            class="fa-solid fa-envelope me-2"></i>Get a Quote</a>
+        <a href="tel:+447884046311" class="btn btn-outline-light btn-lg btn-rounded"><i
+            class="fa-solid fa-phone me-2"></i>+44 7884 046311</a>
+      </div>
+      <div class="mt-5 text-white-50 small">
+        <i class="fa-solid fa-shield-halved me-1"></i> ISO-aligned quality workflows · <i
+          class="fa-solid fa-truck-fast ms-3 me-1"></i> Door-to-door logistics
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">About Emdatra</h2>
+          <p class="lead lead-lg">
+            Emdatra is a UK-based company specialized in importing and exporting food products, headquartered in London.
+            We source high-quality items from trusted suppliers worldwide and deliver them to global markets in line
+            with strict safety and quality standards.
+          </p>
+          <p>
+            Our mission is to bridge producers and consumers through dependable logistics, sustainable partnerships, and
+            innovative supply solutions that ensure efficiency and consistency.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-6 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-2"></i>
+              Transparency & Reliability</div>
+            <div class="col-6 d-flex align-items-center"><i class="fa-solid fa-circle-check text-primary me-2"></i>
+              End-to-End Excellence</div>
+          </div>
+          <div class="row text-center mt-4">
+            <div class="col-4">
+              <div class="stat" data-count="25">0</div>
+              <div class="text-muted small">Countries</div>
+            </div>
+            <div class="col-4">
+              <div class="stat" data-count="120">0</div>
+              <div class="text-muted small">SKUs</div>
+            </div>
+            <div class="col-4">
+              <div class="stat" data-count="98">0</div>
+              <div class="text-muted small">On-time %</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=1400&q=80"
+            alt="Logistics and food pallets" class="img-fluid rounded-4 shadow-smooth" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section guarantee">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">What We Do</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 bg-white rounded-4 shadow-smooth h-100">
+            <div class="icon-lg mb-3"><i class="fa-solid fa-boxes-packing"></i></div>
+            <h5 class="fw-semibold">Food Sourcing</h5>
+            <p class="text-muted mb-0">Verified suppliers, specification control, and batch traceability.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 bg-white rounded-4 shadow-smooth h-100">
+            <div class="icon-lg mb-3"><i class="fa-solid fa-ship"></i></div>
+            <h5 class="fw-semibold">Global Logistics</h5>
+            <p class="text-muted mb-0">Ocean, air, and road freight with customs clearance and insurance.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 bg-white rounded-4 shadow-smooth h-100">
+            <div class="icon-lg mb-3"><i class="fa-solid fa-temperature-three-quarters"></i></div>
+            <h5 class="fw-semibold">Cold Chain</h5>
+            <p class="text-muted mb-0">Reefer solutions for chilled & frozen products end-to-end.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="p-4 bg-white rounded-4 shadow-smooth h-100">
+            <div class="icon-lg mb-3"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h5 class="fw-semibold">Compliance</h5>
+            <p class="text-muted mb-0">UK/EU standards, labeling, and documentation handled.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center brand-logos mt-5 g-4">
+        <div class="col-6 col-md-3"><img alt="brand" src="https://dummyimage.com/400x200/dddddd/000000"
+            class="img-fluid rounded-3"></div>
+        <div class="col-6 col-md-3"><img alt="brand" src="https://dummyimage.com/400x200/dddddd/000000"
+            class="img-fluid rounded-3"></div>
+        <div class="col-6 col-md-3"><img alt="brand" src="https://dummyimage.com/400x200/dddddd/000000"
+            class="img-fluid rounded-3"></div>
+        <div class="col-6 col-md-3"><img alt="brand" src="https://dummyimage.com/400x200/dddddd/000000"
+            class="img-fluid rounded-3"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section id="sectors" class="section">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Sectors We Serve</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <h5 class="mb-3"><i class="fa-solid fa-apple-whole text-primary me-2"></i>Fresh Produce</h5>
+            <p class="text-muted">Fruits & vegetables from certified farms with strict MRL and quality checks.</p>
+            <img src="https://images.pexels.com/photos/885021/pexels-photo-885021.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              class="img-fluid rounded-3" alt="Fresh produce" loading="lazy">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <h5 class="mb-3"><i class="fa-solid fa-wheat-awn text-primary me-2"></i>Dry Goods & Grains</h5>
+            <p class="text-muted">Spices, pulses, rice, and packaged pantry items with stable supply.</p>
+            <img
+              src="https://images.pexels.com/photos/2290070/pexels-photo-2290070.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              class="img-fluid rounded-3" alt="Grains and spices" loading="lazy">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 h-100">
+            <h5 class="mb-3"><i class="fa-solid fa-drumstick-bite text-primary me-2"></i>Frozen & Chilled</h5>
+            <p class="text-muted">Seafood, meat, and specialty foods with cold-chain integrity.</p>
+            <img
+              src="https://images.pexels.com/photos/3659862/pexels-photo-3659862.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              class="img-fluid rounded-3" alt="Frozen foods" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section guarantee">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">How We Work</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="step mb-4">
+            <h5 class="mb-1">1. Requirements & Specs</h5>
+            <p class="text-muted mb-0">We capture your target SKUs, grades, packaging, and timelines.</p>
+          </div>
+          <div class="step mb-4">
+            <h5 class="mb-1">2. Sourcing & QA</h5>
+            <p class="text-muted mb-0">Approved suppliers, samples, certificates (CoA), and QC protocols.</p>
+          </div>
+          <div class="step mb-4">
+            <h5 class="mb-1">3. Logistics & Customs</h5>
+            <p class="text-muted mb-0">Booking, insurance, documentation, and customs clearance.</p>
+          </div>
+          <div class="step">
+            <h5 class="mb-1">4. Delivery & Aftercare</h5>
+            <p class="text-muted mb-0">On-time delivery with post-shipment support and performance reviews.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 bg-white rounded-4 shadow-smooth">
+            <h5 class="fw-semibold mb-3"><i class="fa-solid fa-award text-primary me-2"></i>Our Guarantees</h5>
+            <ul class="list-unstyled m-0">
+              <li class="d-flex mb-2"><i class="fa-solid fa-check text-success me-2"></i><span>Quality-first sourcing
+                  and lot traceability</span></li>
+              <li class="d-flex mb-2"><i class="fa-solid fa-check text-success me-2"></i><span>Clear pricing and
+                  transparent documentation</span></li>
+              <li class="d-flex mb-2"><i class="fa-solid fa-check text-success me-2"></i><span>Cold chain integrity for
+                  sensitive products</span></li>
+              <li class="d-flex"><i class="fa-solid fa-check text-success me-2"></i><span>Dedicated account
+                  management</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Selected Products</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-4">
+          <a data-bs-toggle="modal" data-bs-target="#lightboxModal"
+            data-img="https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&w=1600">
+            <img
+              src="https://images.pexels.com/photos/1084540/pexels-photo-1084540.jpeg?auto=compress&cs=tinysrgb&w=800"
+              class="img-fluid gallery rounded-3" alt="Fruits" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a data-bs-toggle="modal" data-bs-target="#lightboxModal"
+            data-img="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=1600">
+            <img
+              src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=800"
+              class="img-fluid gallery rounded-3" alt="Vegetables" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a data-bs-toggle="modal" data-bs-target="#lightboxModal"
+            data-img="https://images.pexels.com/photos/2290070/pexels-photo-2290070.jpeg?auto=compress&cs=tinysrgb&w=1600">
+            <img
+              src="https://images.pexels.com/photos/2290070/pexels-photo-2290070.jpeg?auto=compress&cs=tinysrgb&w=800"
+              class="img-fluid gallery rounded-3" alt="Spices" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta p-5 p-lg-6 shadow-smooth">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8">
+            <h2 class="mb-2 fw-bold">Ready to ship your next consignment?</h2>
+            <p class="mb-0">Speak to our team for pricing, transit times, and documentation support.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="mailto:info@emdatra.org" class="btn btn-light btn-lg btn-rounded me-2"><i
+                class="fa-regular fa-paper-plane me-2"></i>Email Us</a>
+            <a href="tel:+447884046311" class="btn btn-outline-light btn-lg btn-rounded"><i
+                class="fa-solid fa-phone me-2"></i>Call Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section guarantee">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title mb-3">Contact Us</h2>
+          <p class="text-muted">We typically reply within one business day.</p>
+          <div class="d-flex align-items-start mb-2"><i class="fa-solid fa-location-dot text-primary me-2 mt-1"></i>
+            71-75 Shelton Street, Covent Garden, London, UK, WC2H9JQ</div>
+          <div class="d-flex align-items-start mb-2"><i class="fa-solid fa-phone text-primary me-2 mt-1"></i> +44 7884
+            046311</div>
+          <div class="d-flex align-items-start mb-3"><i class="fa-solid fa-envelope text-primary me-2 mt-1"></i>
+            info@emdatra.org</div>
+
+          <iframe title="Emdatra London Map" class="w-100 rounded-4 shadow-smooth" style="border:0; min-height:300px"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=71-75%20Shelton%20Street%2C%20Covent%20Garden%2C%20London%20WC2H%209JQ&output=embed"></iframe>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-white p-4 rounded-4 shadow-smooth">
+            <h5 class="fw-semibold mb-3">Get a Quote</h5>
+            <!-- Formspree (replace with your endpoint if needed) -->
+            <form action="https://formspree.io/f/mwkgyyya" method="POST" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="John Smith" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Business Email</label>
+                  <input type="email" name="email" class="form-control" placeholder="name@company.com" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone</label>
+                  <input type="tel" name="phone" class="form-control" placeholder="+44 7884 046311" required>
+                  <div class="invalid-feedback">Please add a phone number.</div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Service</label>
+                  <select name="service" class="form-select" required>
+                    <option value="">Choose…</option>
+                    <option>Food Sourcing</option>
+                    <option>Logistics & Customs</option>
+                    <option>Cold Chain</option>
+                    <option>Compliance & Labelling</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose a service.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" class="form-control" rows="4" placeholder="Tell us about your requirements…"
+                    required></textarea>
+                  <div class="invalid-feedback">Please add a message.</div>
+                </div>
+                <div class="col-12 d-grid d-md-flex gap-2">
+                  <button class="btn btn-primary btn-rounded px-4" type="submit"><i
+                      class="fa-solid fa-paper-plane me-2"></i>Send</button>
+                  <a class="btn btn-outline-secondary btn-rounded" href="mailto:info@emdatra.org"><i
+                      class="fa-regular fa-envelope me-2"></i>Email</a>
+                  <a class="btn btn-outline-secondary btn-rounded" href="tel:+447884046311"><i
+                      class="fa-solid fa-phone me-2"></i>Call</a>
+                </div>
+              </div>
+              <input type="hidden" name="source" value="Emdatra Landing Page" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div class="small">© <span id="year"></span> Emdatra Ltd. All rights reserved.</div>
+      <div class="small">
+        <i class="fa-solid fa-building me-1"></i> Registered in the UK ·
+        <a href="#about" class="ms-1">About</a> ·
+        <a href="#contact" class="ms-1">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark">
+        <button type="button" class="btn btn-light position-absolute end-0 m-2" data-bs-dismiss="modal"
+          aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="Preview" class="w-100 rounded-2">
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Actions -->
+  <a class="whatsapp" href="https://wa.me/447884046311" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button id="btnTop" class="back-to-top border-0"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form validation
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) { event.preventDefault(); event.stopPropagation(); }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+
+    // Stats Counter
+    const counters = document.querySelectorAll('.stat');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = +el.dataset.count;
+          let cur = 0;
+          const step = Math.ceil(target / 50);
+          const tick = () => {
+            cur += step;
+            if (cur >= target) { el.textContent = target; observer.unobserve(el); }
+            else { el.textContent = cur; requestAnimationFrame(tick); }
+          };
+          tick();
+        }
+      });
+    }, { threshold: .4 });
+    counters.forEach(c => observer.observe(c));
+
+    // Back to top
+    const btnTop = document.getElementById('btnTop');
+    window.addEventListener('scroll', () => {
+      btnTop.style.display = window.scrollY > 600 ? 'grid' : 'none';
+    });
+    btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Lightbox
+    const lbModal = document.getElementById('lightboxModal');
+    lbModal.addEventListener('show.bs.modal', (e) => {
+      const trigger = e.relatedTarget;
+      const src = trigger?.getAttribute('data-img') || '';
+      document.getElementById('lightboxImg').src = src;
+    });
+  </script>
+</body>
+
+</html>
